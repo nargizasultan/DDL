@@ -1,0 +1,106 @@
+CREATE TABLE java(
+id SERIAL PRIMARY KEY ,
+first_name VARCHAR(50) NOT NULL ,
+last_name VARCHAR(100)NOT NULL ,
+date_of_birth DATE ,
+email VARCHAR (200) NOT NULL ,
+gender VARCHAR(60) NOT NULL
+);
+INSERT INTO javascrpt(first_name, last_name, date_of_birth, email, gender)
+VALUES ('Nargiza','Sultanmuratova', '2003-12-18','sultanmuratova@gmail.com','female'),
+('Azat','Ibraev','2095-01-07','azat@gmail.com','male'),
+SELECT first_name FROM java;
+SELECT * FROM java;
+CREATE TABLE CC(
+id SERIAL PRIMARY KEY ,
+gender VARCHAR(60),
+country VARCHAR(40)
+);
+CREATE TABLE phones(
+first_name VARCHAR(60) NOT NULL ,
+price INT NOT NULL,
+model VARCHAR(70) NOT NULL);
+INSERT INTO phones(first_name, price, model)
+VALUES ('samsung',4000000,'Galaxy x'),
+('iPhone',5000,'x'),
+('Redmi',30000,'A1');
+SELECT * FROM phones;
+SELECT * FROM phones WHERE first_name='samsung';
+insert into CC(gender, country)
+values ('male','naryn'),
+('female','osh'),
+('male','chui');
+select * from CC;
+select * from java;
+DELETE FROM java WHERE first_name = 'Nargiza' ;
+CREATE TABLE mack
+( id SERIAL PRIMARY KEY NOT NULL ,
+first_name VARCHAR(250) NOT NULL,
+last_name VARCHAR(250) NOT NULL,
+gender VARCHAR(100) NOT NULL,
+email VARCHAR(100) NOT NULL);INSERT INTO mack(first_name, last_name, gender, email)
+values ('Nurzhan', 'Abdyraeva', 'famail', 'nurzhan@gmail.com'),
+('Nargiza', 'Sultanmuratova', 'femail', 'nargiza@gmail.com'),
+SELECT * FROM mack;CREATE TABLE teacher
+( id SERIAL PRIMARY KEY NOT NULL ,
+first_name VARCHAR(250)NOT NULL ,
+last_name VARCHAR(250)NOT NULL ,
+gender VARCHAR(100)NOT NULL ,
+email VARCHAR(100)NOT NULL);
+drop table teacher;INSERT INTO teacher(first_name, last_name, gender, email)
+VALUES ('Aizada', 'Bolotbekova', 'female', 'aizadabolotbekova@gmail.com'),
+('Niet', 'Nurkulov', 'Male', 'nietnurkulov@gmail.com');SELECT * FROM teacher;CREATE TABLE director
+( id SERIAL PRIMARY KEY NOT NULL,
+first_name VARCHAR(250)NOT NULL ,
+last_name VARCHAR(250)NOT NULL ,
+gender VARCHAR(100)NOT NULL ,
+email VARCHAR(100)NOT NULL
+);
+drop table director;INSERT INTO director(first_name, last_name, gender, email)
+VALUES ('Kyial', 'Bayasbekova', 'female', 'kyialbayasbekova@gmail.com');SELECT * FROM director;CREATE TABLE cleaningWoman
+( id SERIAL PRIMARY KEY NOT NULL,
+first_name VARCHAR(250)NOT NULL ,
+last_name VARCHAR(250)NOT NULL ,
+gender VARCHAR(100)NOT NULL ,
+email VARCHAR(100)NOT NULL
+);
+drop table cleaningWoman;INSERT INTO cleaningWoman(first_name, last_name, gender, email)
+VALUES ('Anara', 'Kaparova', 'female', 'anarakaparova@gmail.com'),
+('Chynara', 'Sharshenova', 'female', 'chynarasharshenova@gmail.com');
+SELECT * FROM cleaningWoman;create table student1(
+id serial primary key ,
+first_name varchar(50) not null ,
+last_name varchar(50) not null ,
+gmail varchar(50) ,
+gender varchar(15) not null ,
+ip_adres varchar(50)not null);
+insert into student1 (first_name, last_name,gmail,gender,ip_adres)
+values ( 'Boony', 'Howieson', 'bhowieson7@hibu.com', 'Female', '158.61.27.190'),
+( 'Shelden', 'Humby', 'shumby3@ebay.com', 'Non-binary', '103.117.145.180'),
+( 'Melamie', 'Willmett', 'mwillmett0@theguardian.com', 'Male', '171.185.41.145'),
+( 'Sayre', 'Reichert', 'sreichert8@163.com', 'Male', '22.49.20.17'),
+( 'Candida', 'Alekseev', 'calekseev1@issuu.com', 'Female', '143.193.100.181'),
+( 'Regina', 'Chalk', 'rchalk4@biglobe.ne.jp', 'Polygender', '168.108.218.183'),
+( 'Elton', 'Brimham', 'ebrimham6@princeton.edu', 'Female', '164.252.8.244'),
+( 'Chico', 'Morigan', 'cmorigan5@xinhuanet.com', 'Male', '88.230.245.21'),
+( 'Eleni', 'Kingswood', 'ekingswood2@1688.com', 'Male', '16.195.140.176');select * from student1;
+update student1
+set first_name = 'Bektur', last_name = 'Tashmatov'
+where id = 5;
+delete
+from student1 where id = 2;
+drop table student1;
+select * from student1 order by id;create table animals(
+id serial primary key not null ,
+animal varchar (50) not null ,
+hawMach INT not null
+);create table movie(
+name varchar(50) not null ,
+size double precision not null ,
+film_genre varchar (50)not null
+);
+insert into movie(name, size, film_genre)
+VALUES ('titanick',2.15,'historyal'),
+('ak keme',1.28,'drama'),
+('venom',1.52,'fantasy');
+select * from movie;
